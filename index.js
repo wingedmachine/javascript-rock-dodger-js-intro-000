@@ -42,7 +42,10 @@ function createRock(x) {
   GAME.appendChild(rock);
 
   function moveRock() {
-    if(checkCollision(rock)) endGame();
+    if(checkCollision(rock)) {
+      endGame();
+      return;
+    }
 
     rock.style.top = `${top += 2}px`;
     if (top < 400) {
