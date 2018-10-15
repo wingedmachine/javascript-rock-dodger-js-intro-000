@@ -51,7 +51,7 @@ function createRock(x) {
     if (top < 400) {
       window.requestAnimationFrame(moveRock);
     } else {
-      rock.remove();
+      ROCKS.shift().remove();
     }
   }
 
